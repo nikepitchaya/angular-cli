@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px;
+    background-color: aqua;
+
+    h1 {
+        color: #4CAF50;
+    }
+
+    .calculate-money {
+        width: fit-content;
+        padding: 10px;
+        border-radius: 2px;
+        background-color: #4CAF50;
+
+        input {
+            padding: 2px;
+            border: 2px;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 2px;
+            border: 2px;
+            border-radius: 4px;
+            margin-left: 4px;
+        }
+
+        button:hover {
+            transform: scaleY(1.1);
+        }
+    }
+
+    .container-app-action-bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 60%;
+        padding: 4px;
+        background-color: rgb(240, 168, 168);
+        .app-action-bar-1{
+            width: fit-content;
+            padding: 4px;
+            background-color: #4CAF50;
+        }
+        .app-action-bar-2{
+            width: fit-content;
+            padding: 4px;
+            background-color: rgb(160, 91, 224);
+        }
+    }
+}
