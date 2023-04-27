@@ -7,11 +7,13 @@
   </div>
   <div class="container-app-action-bar">
     <div class="app-action-bar-1">
-      <app-action-bar name="Aon"></app-action-bar>
+      <app-action-bar (showCount)="showCount($event)" name="Plus"></app-action-bar>
     </div>
     <div class="app-action-bar-2">
-      <app-action-bar name="Nike"></app-action-bar>
+      <app-action-bar (showCount)="showCount($event)" name="Minus"></app-action-bar>
     </div>
-
+  </div>
+  <div>
+    <p>This is a sum of count : {{countPlus - countMinus}}</p>
   </div>
 </div>

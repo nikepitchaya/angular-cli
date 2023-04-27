@@ -1,1 +1,8 @@
-<p>action-bar works! by {{name}}</p>
+<div class="container">
+    <h3>Counter-bar works! by {{name}}</h3>
+    <div class="counter-bar-container">
+        <button (click)="plusNumber()">+</button>
+        <input type="text" [value]="count">
+        <button (click)="minusNumber()">-</button>
+    </div>
+</div>
