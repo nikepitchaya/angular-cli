@@ -6,31 +6,17 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./action-bar.component.scss'],
 })
 export class ActionBarComponent {
-  count: number = 0;
+  @Input() count: number = 0;
   @Input() name: string = '';
-  @Output() showCount = new EventEmitter();
+  @Input() step: number = 1;
+  @Output() changeCountWidth = new EventEmitter();
 
   plusNumber(): void {
-    this.count++;
-    this.emitCounter()
+    if (this.count < 200)
+      (this.count += this.step), this.changeCountWidth.emit(this.count);
   }
   minusNumber(): void {
-    this.count--;
-    this.emitCounter()
-  }
-  emitCounter(): void {
-    if (this.name == 'Minus') {
-      let payload = {
-        count: this.count,
-        action: 'Minus',
-      };
-      this.showCount.emit(payload);
-    } else if (this.name == 'Plus') {
-      let payload = {
-        count: this.count,
-        action: 'Plus',
-      };
-      this.showCount.emit(payload);
-    }
+    if (this.count >= this.step)
+      (this.count -= this.step), this.changeCountWidth.emit(this.count);
   }
 }

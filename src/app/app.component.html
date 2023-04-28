@@ -1,19 +1,10 @@
 <div class="container">
-  <h1>Calculate Shabu Style</h1>
-  <div class="calculate-money">
-    <input [(ngModel)]="priceShabu" type="number" placeholder="Price of shabu">
-    <button (click)="calculateMoney()">Calculate</button>
-    <p>Your price is : {{paymentPrice}}</p>
-  </div>
   <div class="container-app-action-bar">
     <div class="app-action-bar-1">
-      <app-action-bar (showCount)="showCount($event)" name="Plus"></app-action-bar>
-    </div>
-    <div class="app-action-bar-2">
-      <app-action-bar (showCount)="showCount($event)" name="Minus"></app-action-bar>
+      <app-action-bar [step]="20" [count]="divWidthCounter" (changeCountWidth)="changeCountWidth($event)"></app-action-bar>
     </div>
   </div>
-  <div>
-    <p>This is a sum of count : {{countPlus - countMinus}}</p>
+  <div class="container-app-square-flex">
+    <app-square-flex [divWidth]="divWidthCounter"></app-square-flex>
   </div>
 </div>
