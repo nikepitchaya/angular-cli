@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SquareFlexComponent } from './square-flex.component';
+import { ListCustomerComponent } from './list-customer.component';
 
-describe('SquareFlexComponent', () => {
-  let component: SquareFlexComponent;
-  let fixture: ComponentFixture<SquareFlexComponent>;
+describe('ListCustomerComponent', () => {
+  let component: ListCustomerComponent;
+  let fixture: ComponentFixture<ListCustomerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SquareFlexComponent ]
+      declarations: [ ListCustomerComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SquareFlexComponent);
+    fixture = TestBed.createComponent(ListCustomerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

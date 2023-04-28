@@ -7,8 +7,14 @@ import { Counter } from 'src/interfaces/counter';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  divWidthCounter: number = 20;
-  changeCountWidth(value: number): void {
-    this.divWidthCounter = value;
+  showCustomerList: boolean = true;
+  customerList: string[] = [];
+  setCustomerList(customerName: string): void {
+    console.log(customerName);
+    this.customerList.unshift(customerName);
+  }
+  deleteCustomer(index: number): void {
+    console.log(index)
+    this.customerList.splice(index, 1);
   }
 }
