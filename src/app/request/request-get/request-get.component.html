@@ -1,0 +1,20 @@
+<div class="container">
+    <table class="table-movie-list">
+        <thead>
+            <th>Isbn</th>
+            <th>Name</th>
+            <th>MediaType</th>
+            <th>Country</th>
+            <th>Authors</th>
+            <th>Released</th>
+        </thead>
+        <tbody *ngFor="let book of data;let i = index">
+            <td>{{book.isbn}}</td>
+            <td>{{book.name}}</td>
+            <td>{{book.mediaType}}</td>
+            <td>{{book.country}}</td>
+            <td>{{book.authors}}</td>
+            <td>{{book.released.substring(0, 10)}}</td>
+        </tbody>
+    </table>
+</div>

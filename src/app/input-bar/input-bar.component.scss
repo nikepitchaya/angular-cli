@@ -1,4 +1,12 @@
-.container{
-    display: flex;
-    justify-content: center;
+.container {
+    margin: 10px 0px 10px 0px;
+    div{
+        input{
+            padding: 4px;
+        }
+        button{
+            margin-left: 4px;
+            padding: 4px;
+        }
+    }
 }

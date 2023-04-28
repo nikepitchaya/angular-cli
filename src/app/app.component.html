@@ -1,13 +1,5 @@
 <div class="container">
-  <h1>Add Customer</h1>
-  <div>
-    <app-input-bar (setCustomerList)="setCustomerList($event)"></app-input-bar>
-  </div>
-  <button (click)="showCustomerList = !showCustomerList">{{showCustomerList ? "Hide customer list" : "Show customer list"}}</button>
-  <div>
-    <app-list-customer *ngIf="showCustomerList else elseTemplate" [customerList]="customerList" (deleteCustomer)="deleteCustomer($event)"></app-list-customer>
-    <ng-template #elseTemplate>
-        <p style="text-align: center;">No Teamplate</p>
-    </ng-template>
-  </div>
+  <h1>Rest api service</h1>
+  <app-input-bar (setMovieName)="setMovieName($event)"></app-input-bar>
+  <app-request-get></app-request-get>
 </div>

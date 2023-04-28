@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Counter } from 'src/interfaces/counter';
+import { Component, ViewChild } from '@angular/core';
+import { RequestGetComponent } from './request/request-get/request-get.component';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +7,11 @@ import { Counter } from 'src/interfaces/counter';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  showCustomerList: boolean = true;
-  customerList: string[] = [];
-  setCustomerList(customerName: string): void {
-    console.log(customerName);
-    this.customerList.unshift(customerName);
+  @ViewChild(RequestGetComponent) child: any;
+  ngOnInit(): void {
+    console.log('component redering');
   }
-  deleteCustomer(index: number): void {
-    console.log(index)
-    this.customerList.splice(index, 1);
+  setMovieName(name: string): void {
+    this.child.fetchData(name);
   }
 }
